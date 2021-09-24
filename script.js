@@ -22,7 +22,7 @@ checkButton.addEventListener("click", function validatebillandcashamount ()
 function calculateChange(amountToBeReturned) {
     for ( let i = 0; i < availableNotes.length; i++) {
         const numberOfNotes = Math.trunc(amountToBeReturned /  availableNotes [i]);
-        amountToBeReturned %= availableNotes[i]; 
+        amountToBeReturned = amountToBeReturned % availableNotes[i]; 
         noOfNotes[i].innerText = numberOfNotes;
     }
 }
